@@ -264,12 +264,11 @@ footer {
 }
 
 .footer-logo-crop {
-  width: min(170px, 44vw);
-  height: 82px;
-  overflow: hidden;
+  width: min(120px, 32vw);
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
+  overflow: visible;
 }
 
 .footer-logo {
