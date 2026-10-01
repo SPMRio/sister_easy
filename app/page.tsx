@@ -70,7 +70,13 @@ export default function Home() {
             acompanhamento e registro da Secretaria da Mulher.
           </p>
         </div>
-        <div className="hero-mark" aria-hidden="true">S</div>
+        <div className="hero-logo-wrap">
+          <img
+            className="hero-logo"
+            src="/logo.png"
+            alt="SISTER - Sistema da Mulher"
+          />
+        </div>
       </section>
 
       <section className="section-heading">
@@ -121,30 +127,6 @@ export default function Home() {
             </div>
           </article>
         ))}
-      </section>
-
-      <section className="flow">
-        <div>
-          <span>FLUXO</span>
-          <h3>Como funciona</h3>
-        </div>
-
-        <div className="flow-steps">
-          <div className="flow-step">
-            <strong>01</strong>
-            <span>Cadastro e recepção</span>
-          </div>
-          <div className="flow-arrow">→</div>
-          <div className="flow-step">
-            <strong>02</strong>
-            <span>Atendimento especializado</span>
-          </div>
-          <div className="flow-arrow">→</div>
-          <div className="flow-step">
-            <strong>03</strong>
-            <span>Registro e acompanhamento</span>
-          </div>
-        </div>
       </section>
 
       <footer>
