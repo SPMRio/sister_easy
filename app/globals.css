@@ -263,11 +263,29 @@ footer {
   padding: 42px 4px 12px;
 }
 
+.footer-logo-crop {
+  width: min(170px, 44vw);
+  height: 82px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
 .footer-logo {
   display: block;
-  width: min(180px, 44vw);
+  width: 100%;
   height: auto;
   object-fit: contain;
+  filter:
+    brightness(0)
+    saturate(100%)
+    invert(27%)
+    sepia(83%)
+    saturate(1896%)
+    hue-rotate(252deg)
+    brightness(83%)
+    contrast(92%);
 }
 
 @media (max-width: 760px) {
