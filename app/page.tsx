@@ -1,56 +1,56 @@
 const modules = [
   {
-    icon: "👥",
-    title: "Sistema de Recepção",
+    icon: "diversity_3",
+    title: "Recepção",
     description:
-      "Cadastro-base das mulheres atendidas e consulta dos registros de atendimento.",
+      "Cadastro inicial e consulta das mulheres atendidas pela rede.",
     actions: [
       {
-        label: "Registro de cadastro e atendimento",
+        label: "Registrar cadastro e atendimento",
         href: "https://siurb.rio/portal/apps/experiencebuilder/experience/?id=0e44e6f5476745009a1d5ebd1d5dea48&draft=true",
       },
       {
-        label: "Consulta cadastro de atendimento",
+        label: "Consultar cadastros",
         href: "https://siurb.rio/portal/apps/experiencebuilder/experience/?id=cea846a10740469da08f7522e1c7cd70",
       },
     ],
   },
   {
-    icon: "🛡️",
+    icon: "health_and_safety",
     title: "Enfrentamento à Violência",
     description:
-      "Registro especializado de atendimentos e acompanhamento das fichas.",
+      "Registro das fichas e acompanhamento dos atendimentos especializados.",
     actions: [
       {
-        label: "Registro de ficha",
+        label: "Registrar ficha de atendimento",
         href: "https://siurb.rio/portal/apps/experiencebuilder/experience/?id=cafd56e46f454363a1daed786f08c701",
       },
       {
-        label: "Consulta de ficha de atendimento",
+        label: "Consultar fichas",
         disabled: true,
       },
     ],
   },
   {
-    icon: "📋",
-    title: "Registro de Atividades",
+    icon: "assignment",
+    title: "Atividades",
     description:
-      "Registro de oficinas, palestras, ações e atividades externas.",
+      "Registro de oficinas, palestras, ações e demais atividades realizadas.",
     actions: [
       {
-        label: "Registro de atividade",
+        label: "Registrar atividade",
         disabled: true,
       },
     ],
   },
   {
-    icon: "💳",
-    title: "Acompanhamento dos Cartões",
+    icon: "credit_card",
+    title: "Cartões",
     description:
-      "Acompanhamento operacional e consulta do fluxo de cartões.",
+      "Acompanhamento do fluxo e da situação dos cartões.",
     actions: [
       {
-        label: "Acessar acompanhamento",
+        label: "Acompanhar cartões",
         disabled: true,
       },
     ],
@@ -61,29 +61,27 @@ export default function Home() {
   return (
     <main className="page">
       <section className="hero">
-        <div>
-          <span className="hero-kicker">Plataforma integrada</span>
-          <h1>SISTER</h1>
-          <h2>Sistema da Mulher</h2>
+        <div className="hero-copy">
+          <span className="hero-kicker">SISTER</span>
+          <h1>Sistema da Mulher</h1>
           <p>
-            Um único ponto de acesso para os sistemas de atendimento,
-            acompanhamento e registro da Secretaria da Mulher.
+            Acesso integrado aos sistemas de atendimento e acompanhamento
+            da Secretaria da Mulher.
           </p>
         </div>
-        <div className="hero-logo-wrap">
-          <img
-            className="hero-logo"
-            src="/logo.png"
-            alt="SISTER - Sistema da Mulher"
-          />
-        </div>
+
+        <img
+          className="hero-logo"
+          src="/logo.png"
+          alt="SISTER - Sistema da Mulher"
+        />
       </section>
 
       <section className="section-heading">
         <div>
-          <span>ACESSO RÁPIDO</span>
-          <h3>Módulos do sistema</h3>
-          <p>Escolha o módulo que deseja acessar.</p>
+          <span>Acesso rápido</span>
+          <h2>O que você precisa acessar?</h2>
+          <p>Escolha um módulo para continuar.</p>
         </div>
       </section>
 
@@ -91,11 +89,11 @@ export default function Home() {
         {modules.map((module) => (
           <article className="module-card" key={module.title}>
             <div className="module-icon" aria-hidden="true">
-              {module.icon}
+              <span className="material-symbols-rounded">{module.icon}</span>
             </div>
 
             <div className="module-copy">
-              <h4>{module.title}</h4>
+              <h3>{module.title}</h3>
               <p>{module.description}</p>
             </div>
 
@@ -108,7 +106,7 @@ export default function Home() {
                     key={action.label}
                     type="button"
                   >
-                    {action.label}
+                    <span>{action.label}</span>
                     <small>Em breve</small>
                   </button>
                 ) : (
@@ -120,7 +118,9 @@ export default function Home() {
                     rel="noopener noreferrer"
                   >
                     <span>{action.label}</span>
-                    <span className="arrow" aria-hidden="true">↗</span>
+                    <span className="material-symbols-rounded action-icon" aria-hidden="true">
+                      open_in_new
+                    </span>
                   </a>
                 ),
               )}
