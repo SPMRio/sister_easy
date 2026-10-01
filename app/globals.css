@@ -90,10 +90,10 @@ button { font: inherit; }
     linear-gradient(
       90deg,
       transparent 0 69%,
-      rgba(23,60,103,.18) 69% 76%,
-      rgba(67,180,220,.18) 76% 82%,
-      rgba(187,125,232,.18) 82% 93%,
-      rgba(255,211,71,.23) 93% 96%,
+      var(--navy) 69% 76%,
+      var(--blue) 76% 82%,
+      var(--lavender) 82% 93%,
+      var(--yellow) 93% 96%,
       transparent 96%
     );
   pointer-events: none;
@@ -258,9 +258,12 @@ button { font: inherit; }
 
 footer {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 16px;
   padding: 42px 4px 12px;
+  text-align: center;
 }
 
 .footer-logo-crop {
@@ -318,4 +321,27 @@ footer {
   footer {
     padding-top: 32px;
   }
+}
+
+
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.footer-contact strong {
+  color: var(--purple);
+  font-size: 14px;
+}
+
+.footer-contact a {
+  color: var(--purple-deep);
+  font-weight: 700;
+}
+
+.footer-contact a:hover {
+  text-decoration: underline;
 }
