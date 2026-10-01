@@ -62,11 +62,11 @@ export default function Home() {
     <main className="page">
       <section className="hero">
         <div className="hero-copy">
-          <h1>SISTER</h1>
-          <h2>Sistema da Mulher</h2>
+          <span className="hero-kicker">SISTER</span>
+          <h1>Sistema da Mulher</h1>
           <p>
             Acesso integrado aos sistemas de atendimento e acompanhamento
-            da Secretaria da Mulher.
+            da Secretaria de Políticas para Mulher e Cuidado do Município do Rio de Janeiro.
           </p>
         </div>
 
@@ -130,7 +130,7 @@ export default function Home() {
 
       <footer>
         <strong>SISTER</strong>
-        <span>Sistema da Mulher</span>
+        <span>Secretaria de Políticas para Mulher e Cuidado do Município do Rio de Janeiro</span>
       </footer>
     </main>
   );
