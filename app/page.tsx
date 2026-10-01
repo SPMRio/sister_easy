@@ -3,7 +3,7 @@ const modules = [
     icon: "diversity_3",
     title: "Recepção",
     description:
-      "Cadastro inicial e consulta das mulheres atendidas pela rede.",
+      "Cadastro inicial e atendimento das mulheres que chegam aos equipamentos da SPM-Rio. O módulo reúne as informações de identificação, contato, território, perfil sociodemográfico e encaminhamentos, além de permitir a consulta dos cadastros já realizados.",
     actions: [
       {
         label: "Registrar cadastro e atendimento",
@@ -129,11 +129,13 @@ export default function Home() {
       </section>
 
       <footer>
-        <img
-          className="footer-logo"
-          src="/logo_vertical.png"
-          alt="Rio"
-        />
+        <div className="footer-logo-crop" aria-label="Rio">
+          <img
+            className="footer-logo"
+            src="/logo_vertical.png"
+            alt="Rio"
+          />
+        </div>
       </footer>
     </main>
   );
