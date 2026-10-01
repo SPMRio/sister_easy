@@ -62,8 +62,8 @@ export default function Home() {
     <main className="page">
       <section className="hero">
         <div className="hero-copy">
-          <span className="hero-kicker">SISTER</span>
-          <h1>Sistema da Mulher</h1>
+          <h1>SISTER</h1>
+          <h2>Sistema da Mulher</h2>
           <p>
             Acesso integrado aos sistemas de atendimento e acompanhamento
             da Secretaria de Políticas para Mulher e Cuidado do Município do Rio de Janeiro.
@@ -129,8 +129,11 @@ export default function Home() {
       </section>
 
       <footer>
-        <strong>SISTER</strong>
-        <span>Secretaria de Políticas para Mulher e Cuidado do Município do Rio de Janeiro</span>
+        <img
+          className="footer-logo"
+          src="/logo_vertical.png"
+          alt="Rio"
+        />
       </footer>
     </main>
   );
