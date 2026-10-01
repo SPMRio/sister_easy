@@ -1,0 +1,338 @@
+:root {
+  --purple-950: #2f145a;
+  --purple-900: #3d1b6f;
+  --purple-800: #51238b;
+  --purple-700: #6f3aad;
+  --purple-100: #f3ecfb;
+  --purple-50: #faf7fe;
+  --ink: #1c1730;
+  --muted: #6f687b;
+  --line: #e7ddf3;
+  --white: #ffffff;
+}
+
+* { box-sizing: border-box; }
+
+html { background: #f7f5fa; }
+
+body {
+  margin: 0;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at 15% -10%, rgba(111, 58, 173, .12), transparent 34%),
+    linear-gradient(#fbfaff, #f6f3fa);
+}
+
+a { color: inherit; text-decoration: none; }
+
+button { font: inherit; }
+
+.page {
+  width: min(1180px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 42px 0 28px;
+}
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 270px;
+  padding: 44px 48px;
+  border-radius: 28px;
+  color: white;
+  background:
+    linear-gradient(120deg, rgba(49, 19, 91, .98), rgba(106, 55, 165, .94)),
+    var(--purple-900);
+  box-shadow: 0 24px 55px rgba(65, 31, 106, .22);
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: auto -100px -140px auto;
+  width: 340px;
+  height: 340px;
+  border-radius: 50%;
+  background: rgba(255,255,255,.08);
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: -90px;
+  right: 210px;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background: rgba(255,255,255,.05);
+}
+
+.hero > div:first-child {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+}
+
+.hero-kicker,
+.section-heading span,
+.flow > div > span {
+  display: inline-block;
+  margin-bottom: 12px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+.hero-kicker {
+  padding: 7px 11px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.14);
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: clamp(44px, 6vw, 76px);
+  line-height: .95;
+  letter-spacing: -.045em;
+}
+
+.hero h2 {
+  margin: 9px 0 14px;
+  font-size: clamp(21px, 2.4vw, 31px);
+  font-weight: 600;
+}
+
+.hero p {
+  max-width: 670px;
+  margin: 0;
+  color: rgba(255,255,255,.84);
+  font-size: 16px;
+  line-height: 1.55;
+}
+
+.hero-mark {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  width: 120px;
+  height: 120px;
+  border: 1px solid rgba(255,255,255,.22);
+  border-radius: 30px;
+  background: rgba(255,255,255,.11);
+  font-size: 64px;
+  font-weight: 800;
+  box-shadow: inset 0 1px rgba(255,255,255,.2);
+}
+
+.section-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 36px 4px 18px;
+}
+
+.section-heading span,
+.flow > div > span {
+  color: var(--purple-700);
+}
+
+.section-heading h3,
+.flow h3 {
+  margin: 0;
+  font-size: 28px;
+  letter-spacing: -.02em;
+}
+
+.section-heading p {
+  margin: 7px 0 0;
+  color: var(--muted);
+}
+
+.modules-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.module-card {
+  min-height: 290px;
+  display: flex;
+  flex-direction: column;
+  padding: 26px;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  background: rgba(255,255,255,.92);
+  box-shadow: 0 10px 30px rgba(54, 32, 81, .07);
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+}
+
+.module-card:hover {
+  transform: translateY(-2px);
+  border-color: #d6c3eb;
+  box-shadow: 0 18px 40px rgba(54, 32, 81, .10);
+}
+
+.module-icon {
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  border-radius: 14px;
+  background: var(--purple-100);
+  font-size: 22px;
+}
+
+.module-copy h4 {
+  margin: 18px 0 8px;
+  font-size: 21px;
+}
+
+.module-copy p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.55;
+  min-height: 50px;
+}
+
+.module-actions {
+  display: grid;
+  gap: 10px;
+  margin-top: auto;
+  padding-top: 24px;
+}
+
+.module-button {
+  min-height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 13px 15px;
+  border: 1px solid #d9c9eb;
+  border-radius: 13px;
+  color: var(--purple-900);
+  background: #fff;
+  font-weight: 750;
+  transition: background .16s ease, color .16s ease, border-color .16s ease;
+}
+
+.module-button:hover {
+  color: white;
+  border-color: var(--purple-800);
+  background: var(--purple-800);
+}
+
+.module-button .arrow {
+  font-size: 20px;
+}
+
+.module-button.disabled {
+  cursor: not-allowed;
+  color: #9a94a2;
+  border-color: #ece8f0;
+  background: #f6f4f7;
+}
+
+.module-button.disabled small {
+  margin-left: auto;
+  padding: 4px 7px;
+  border-radius: 999px;
+  color: #8d6a2f;
+  background: #fff0ce;
+  font-size: 10px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.flow {
+  margin-top: 18px;
+  padding: 26px;
+  border: 1px solid #e0d1f0;
+  border-radius: 22px;
+  background: linear-gradient(120deg, #faf5ff, #f4ecfb);
+}
+
+.flow-steps {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr auto 1fr;
+  align-items: center;
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.flow-step {
+  min-height: 82px;
+  padding: 16px;
+  border: 1px solid #dac8ec;
+  border-radius: 14px;
+  background: rgba(255,255,255,.78);
+}
+
+.flow-step strong {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--purple-700);
+  font-size: 12px;
+}
+
+.flow-step span {
+  font-weight: 700;
+}
+
+.flow-arrow {
+  color: var(--purple-700);
+  font-size: 22px;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 26px 4px 6px;
+  color: #81798b;
+  font-size: 13px;
+}
+
+footer strong {
+  color: var(--purple-800);
+}
+
+@media (max-width: 760px) {
+  .page {
+    width: min(100% - 20px, 1180px);
+    padding-top: 12px;
+  }
+
+  .hero {
+    min-height: 0;
+    padding: 28px;
+    border-radius: 20px;
+  }
+
+  .hero-mark {
+    display: none;
+  }
+
+  .modules-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .flow-steps {
+    grid-template-columns: 1fr;
+  }
+
+  .flow-arrow {
+    transform: rotate(90deg);
+    text-align: center;
+  }
+
+  footer {
+    flex-direction: column;
+  }
+}
