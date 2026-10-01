@@ -136,6 +136,16 @@ export default function Home() {
             alt="Rio"
           />
         </div>
+
+        <div className="footer-contact">
+          <strong>Coordenadoria de Dados SPMRIO</strong>
+          <span>
+            Dúvidas ou suporte:{" "}
+            <a href="mailto:spmrio.dados@prefeitura.rio">
+              spmrio.dados@prefeitura.rio
+            </a>
+          </span>
+        </div>
       </footer>
     </main>
   );
