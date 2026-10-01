@@ -110,6 +110,8 @@ export default function Home() {
                     className="module-button"
                     href={action.href}
                     key={action.label}
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
                     <span>{action.label}</span>
                     <span className="arrow" aria-hidden="true">↗</span>
