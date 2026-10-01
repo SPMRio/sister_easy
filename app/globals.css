@@ -90,10 +90,10 @@ button { font: inherit; }
     linear-gradient(
       90deg,
       transparent 0 69%,
-      var(--navy) 69% 76%,
-      var(--blue) 76% 82%,
-      var(--lavender) 82% 93%,
-      var(--yellow) 93% 96%,
+      rgba(23,60,103,.18) 69% 76%,
+      rgba(67,180,220,.18) 76% 82%,
+      rgba(187,125,232,.18) 82% 93%,
+      rgba(255,211,71,.23) 93% 96%,
       transparent 96%
     );
   pointer-events: none;
@@ -267,7 +267,7 @@ footer {
 }
 
 .footer-logo-crop {
-  width: min(120px, 32vw);
+  width: min(92px, 26vw);
   display: flex;
   justify-content: center;
   align-items: center;
