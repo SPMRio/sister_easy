@@ -62,8 +62,8 @@ export default function Home() {
     <main className="page">
       <section className="hero">
         <div className="hero-copy">
-          <span className="hero-kicker">SISTER</span>
-          <h1>Sistema da Mulher</h1>
+          <h1>SISTER</h1>
+          <h2>Sistema da Mulher</h2>
           <p>
             Acesso integrado aos sistemas de atendimento e acompanhamento
             da Secretaria da Mulher.
@@ -79,7 +79,6 @@ export default function Home() {
 
       <section className="section-heading">
         <div>
-          <span>Acesso rápido</span>
           <h2>O que você precisa acessar?</h2>
           <p>Escolha um módulo para continuar.</p>
         </div>
