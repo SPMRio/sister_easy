@@ -19,7 +19,7 @@ const modules = [
     icon: "health_and_safety",
     title: "Enfrentamento à Violência",
     description:
-      "Registro das fichas e acompanhamento dos atendimentos especializados.",
+      "Registro e acompanhamento dos atendimentos realizados com mulheres em situação de violência. O módulo concentra as informações da ficha de atendimento, histórico do acompanhamento, encaminhamentos realizados e dados necessários para o monitoramento dos casos pela equipe.",
     actions: [
       {
         label: "Registrar ficha de atendimento",
@@ -35,7 +35,7 @@ const modules = [
     icon: "assignment",
     title: "Atividades",
     description:
-      "Registro de oficinas, palestras, ações e demais atividades realizadas.",
+      "Registro das oficinas, palestras, ações, mobilizações e demais atividades realizadas pela SPM-Rio. O módulo permite organizar informações como data, local, público participante, equipe responsável e quantidade de pessoas alcançadas, facilitando o acompanhamento das ações desenvolvidas.",
     actions: [
       {
         label: "Registrar atividade",
@@ -47,7 +47,7 @@ const modules = [
     icon: "credit_card",
     title: "Cartões",
     description:
-      "Acompanhamento do fluxo e da situação dos cartões.",
+      "Acompanhamento do fluxo dos cartões desde a solicitação até a entrega. O módulo permitirá consultar a situação de cada cartão, acompanhar etapas do processo, identificar pendências e organizar o controle das beneficiárias atendidas.",
     actions: [
       {
         label: "Acompanhar cartões",
